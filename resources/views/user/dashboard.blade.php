@@ -6,9 +6,6 @@
 </head>
 
 <body>
-
-
-
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
@@ -71,7 +68,7 @@
             @endforeach
 
         </div>
-        </div>
+        
     </section>
 
 
@@ -81,13 +78,13 @@
                 <div class="col-lg-7 col-md-12 left-content">
                     <div class="collection-item">
                         <div class="products-thumb">
-                            <img src="{{asset('assets/user/images/bear.jpg')}}" alt="collection item"
-                                class="large-image image-rounded">
+                            <img src="{{asset('assets/user/images/baby blanket.jpeg')}}" alt="collection item"
+                                class="large-image image-rounded img-fluid">
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
-                            <div class="categories">casual collection</div>
-                            <h3 class="item-title">street wear.</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.
+                        <div class="col-lg-12 col-md-6 col-sm-6 product-entry">
+                            <div class="categories"><h3 class="item-title" style="color: white;">Snuggle Delight</h3></div>
+                            
+                            <p style="color: white;">Wrap your baby in the Snuggle Delight blanket for warm and cozy moments.
                             </p>
                             <div class="btn-wrap">
                                 <a href="shop.html" class="d-flex align-items-center">shop collection <i
@@ -100,14 +97,14 @@
                 <div class="col-lg-5 col-md-12 right-content flex-wrap">
                     <div class="collection-item top-item">
                         <div class="products-thumb">
-                            <img src="{{asset('assets/user/images/collection-item2.jpg')}}" alt="collection item"
+                            <img src="{{asset('assets/user/images/crochetbag.jpeg')}}" alt="collection item"
                                 class="small-image image-rounded">
                         </div>
                         <div class="col-md-6 product-entry">
-                            <div class="categories">Basic Collection</div>
-                            <h3 class="item-title">Basic shoes.</h3>
+                            <div class="categories"></div>
+                            <h3 class="item-title" style="color: white;">Crochet Bag.</h3>
                             <div class="btn-wrap">
-                                <a href="shop.html" class="d-flex align-items-center">shop collection <i
+                                <a href="/user/products/2" class="d-flex align-items-center">shop collection <i
                                         class="icon icon-arrow-io"></i>
                                 </a>
                             </div>
@@ -115,14 +112,14 @@
                     </div>
                     <div class="collection-item bottom-item">
                         <div class="products-thumb">
-                            <img src="{{asset('assets/user/images/collection-item3.jpg')}}" alt="collection item"
+                            <img src="{{asset('assets/user/images/cap.jpeg')}}" alt="collection item"
                                 class="small-image image-rounded">
                         </div>
                         <div class="col-md-6 product-entry">
-                            <div class="categories">Best Selling Product</div>
-                            <h3 class="item-title">woolen hat.</h3>
+                            <div class="categories"><h3 class="item-title" style="color: white;">woolen hat.</h3></div>
+                            
                             <div class="btn-wrap">
-                                <a href="shop.html" class="d-flex align-items-center">shop collection <i
+                                <a href="/user/products/6" class="d-flex align-items-center">shop collection <i
                                         class="icon icon-arrow-io"></i>
                                 </a>
                             </div>
@@ -133,7 +130,7 @@
         </div>
     </section>
 
-    <section id="subscribe" class="padding-large">
+    <!-- <section id="subscribe" class="padding-large">
         <div class="container">
             <div class="row">
                 <div class="block-text col-md-6">
@@ -151,9 +148,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="selling-products" class="product-store bg-light-grey padding-large">
+    <!-- <section id="selling-products" class="product-store bg-light-grey padding-large">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Best selling products</h2>
@@ -1175,9 +1172,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="testimonials" class="padding-large no-padding-bottom">
+    <!-- <section id="testimonials" class="padding-large no-padding-bottom">
         <div class="container">
             <div class="reviews-content">
                 <div class="row d-flex flex-wrap">
@@ -1191,21 +1188,17 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="testimonial-detail">
-                                        <p>“Dignissim massa diam elementum habitant fames. Id nullam pellentesque nisi,
-                                            eget cursus dictumst pharetra, sit. Pulvinar laoreet id porttitor egestas
-                                            dui urna. Porttitor nibh magna dolor ultrices iaculis sit iaculis.”</p>
+                                        <p>“With a hook in hand, anything is possible. Crochet stitches dreams into reality.”</p>
                                         <div class="author-detail">
-                                            <div class="name">By Maggie Rio</div>
+                                            <div class="name">By Unknown</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="testimonial-detail">
-                                        <p>“Dignissim massa diam elementum habitant fames. Id nullam pellentesque nisi,
-                                            eget cursus dictumst pharetra, sit. Pulvinar laoreet id porttitor egestas
-                                            dui urna. Porttitor nibh magna dolor ultrices iaculis sit iaculis.”</p>
+                                        <p>“In a world where you can be anything, be a crocheter. It's where magic and creativity intertwine.”</p>
                                         <div class="author-detail">
-                                            <div class="name">By John Smith</div>
+                                            <div class="name">By Unknown</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1223,8 +1216,8 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> -->
+<!-- 
     <section id="flash-sales" class="product-store padding-large">
 
         <div class="container">
@@ -1389,11 +1382,11 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
-    <section id="quotation" class="align-center padding-large">
+    <!-- <section id="quotation" class="align-center padding-large">
         <div class="inner-content">
             <h2 class="section-title divider">Quote of the day</h2>
             <blockquote>
@@ -1402,10 +1395,10 @@
                 <div class="author-name">- Dr. Seuss</div>
             </blockquote>
         </div>
-    </section>
+    </section> -->
 
-    <hr>
-    <section id="latest-blog" class="padding-large">
+    <!-- <hr> -->
+    <!-- <section id="latest-blog" class="padding-large">
         <div class="container">
             <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
                 <h2 class="section-title">our Journal</h2>
@@ -1475,9 +1468,9 @@
                 </article>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="brand-collection" class="padding-medium bg-light-grey">
+    <!-- <section id="brand-collection" class="padding-medium bg-light-grey">
         <div class="container">
             <div class="d-flex flex-wrap justify-content-between">
                 <img src="{{asset('assets/user/images/brand1.png')}}" alt="phone" class="brand-image">
@@ -1487,9 +1480,9 @@
                 <img src="{{asset('assets/user/images/brand5.png')}}" alt="phone" class="brand-image">
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="instagram" class="padding-large">
+    <!-- <section id="instagram" class="padding-large">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Follow our instagram</h2>
@@ -1535,9 +1528,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="shipping-information">
+    <!-- <section id="shipping-information">
         <hr>
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center justify-content-between">
@@ -1576,9 +1569,9 @@
             </div>
         </div>
         <hr>
-    </section>
+    </section> -->
 
-    @include('user.footer')
+    <!-- @include('user.footer') -->
     @include('user.js')
 
 </body>

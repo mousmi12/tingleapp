@@ -13,12 +13,13 @@ class OrderHistory extends Model
 
     protected $fillable = [
         'customername',
-        'mobileno',
+        'mobile',
         'pid',
         'date',
          'qty',
          'price',
          'totalprice',
+         'description',
         'status',
     ];
 }

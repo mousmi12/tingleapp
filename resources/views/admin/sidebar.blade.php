@@ -8,12 +8,12 @@
             CT
           </a>
           <a href="javascript:void(0)" class="simple-text logo-normal">
-            Creative Tim
+           Tingle App
           </a>
         </div>
         <ul class="nav">
           <li class="active ">
-            <a href="/">
+            <a href="{{route('admin.dashboard')}}">
               <i class="tim-icons icon-chart-pie-36"></i>
               <p>Dashboard</p>
             </a>
@@ -31,18 +31,18 @@
             </a>
           </li>
           <li>
-            <a href="./notifications.html">
+            <a href="{{route('admin.order.index')}}">
               <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
+              <p>Orders</p>
             </a>
           </li>
           <li>
-            <a href="./user.html">
+            <a href="{{route('admin.profile.index')}}">
               <i class="tim-icons icon-single-02"></i>
               <p>User Profile</p>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="./tables.html">
               <i class="tim-icons icon-puzzle-10"></i>
               <p>Table List</p>
@@ -65,7 +65,7 @@
               <i class="tim-icons icon-spaceship"></i>
               <p>Upgrade to PRO</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

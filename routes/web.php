@@ -2,7 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderHistoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +19,10 @@ use App\Http\Controllers\ProductController;
 |
 */
 //Admin Panel
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-});
+// Route::get('/admin', function () {
+//     return view('admin.dashboard')->name('admin.dashboard');
+//});
+Route::get('/admin/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
 
 //Category
 Route::get('/admin/category/index', [CategoryController::class, 'index'])->name('admin.category.index');
@@ -28,8 +34,12 @@ Route::get('/admin/product/index', [ProductController::class, 'index'])->name('a
 Route::get('/admin/product/create', [ProductController::class, 'create'])->name('admin.product.create');
 Route::post('/admin/product/create',[ProductController::class,'store'])->name('admin.product.store');
 
+//Order
+Route::get('/admin/order/index',[OrderHistoryController::class,'index'])->name('admin.order.index');
+Route::post('/admin/order/index', [OrderHistoryController::class, 'updateStatus'])->name('updateOrderStatus');
 
-
+//Profile
+Route::get('/admin/profile/index',[UserProfileController::class,'index'])->name('admin.profile.index');
 
 //User Panel
 // Route::get('/', function () {
@@ -41,3 +51,10 @@ Route::get('/user/products/{catid}',[ProductController::class,'userproduct'])->n
 Route::get('/user/product', function () {
     return view('user.products');
 });
+//Order
+Route::post('/user/product/order',[OrderHistoryController::class,'store'])->name('user.order.store');
+
+
+
+
+
