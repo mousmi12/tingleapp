@@ -1,18 +1,4 @@
-<!--
-=========================================================
-* * Black Dashboard - v1.0.1
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/black-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +43,7 @@
                               <th>
                                 Status
                               </th>
-                             
+                             <th>Action</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -68,6 +54,23 @@
                               <td >{{ $category->name }}</td>
                               <td >{{ $category->description }}</td>
                               <td>{{ $category->status }}</td>
+                              <td >
+                              <a href="{{ route('admin.category.views',$category->id) }}" >
+                                  <i class="fas fa-eye" style="color:rgba(255, 255, 255, 0.7)"></i>
+                                </a>
+                                &nbsp;
+                                <a href="{{ route('admin.category.edit',$category->id) }}" >
+                                  <i class="fas fa-pencil-alt" style="color:rgba(255, 255, 255, 0.7)"></i>
+                                </a>
+                                &nbsp;
+                                <form action="{{ route('admin.category.delete', $category->id) }}" method="POST" style="display: inline;">
+                                  @csrf
+                                 
+                                  <button type="submit" class="btn btn-link" style="padding: 0; background: none; border: none;">
+                                    <i class="fas fa-trash" style="color: rgba(255, 255, 255, 0.7);"></i>
+                                  </button>
+                                </form>
+                              </td>
                             </tr>
                             @endforeach
                           </tbody>

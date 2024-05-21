@@ -65,8 +65,8 @@
                                                 <label class="form-label">Status</label>
                                                 <select class="form-control" name="status" style="background-color: #1e1e2f; color: white;">
                                                     <option value="" disabled selected>--- Select Status ---</option>
-                                                    <option value="0">Active</option>
-                                                    <option value="1">Inactive</option>
+                                                    <option value="Active">Active</option>
+                                                    <option value="Inactive">Inactive</option>
                                                 </select>
                                             </div>
                                         </div>

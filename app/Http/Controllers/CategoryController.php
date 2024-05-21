@@ -9,8 +9,9 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::where('status', 'Active')->get();
         return view('admin.category.index',['categories'=> $categories]);
+        
     }
     public function create()
     {
@@ -53,4 +54,48 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('user.dashboard',['categories'=> $categories]);
     }
+    public function views($id){
+        $category=Category::find($id);
+        return view('admin.category.views',compact('category'));
+    }
+    public function edit($id){
+        $category=Category::find($id);
+        return view('admin.category.edit',compact('category'));
+    }
+    public function update(Request $request,$id)
+    {
+        
+        $category = Category::find($id);
+
+        if (!$category) {
+            return redirect()->back()->with('error', 'Product not found.');
+        }
+    
+        $category->name = $request->input('name');
+
+        $category->description = $request->input('description');
+      
+        $category->status = $request->input('status');
+    
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('products', 'public');
+            $category->image = $imagePath;
+        }
+    
+        $category->save();
+    
+        return redirect()->route('admin.category.edit', $id)->with('message', 'Category updated successfully.');
+    }
+    public function delete($id)
+{
+    $category = Category::find($id);
+    if (!$category) {
+        return redirect()->back()->with('error', 'category not found.');
+    }
+
+    $category->status ="Inactive";
+    $category->save();
+    $categories = Category::where('status', 'Active')->get();
+    return view('admin.category.index',['categories'=> $categories]);
+}
 }

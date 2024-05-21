@@ -18,6 +18,7 @@
                                 <h5 class="title">Adding New Products</h5>
                             </div>
                             <div class="card-body">
+                            @if(session()->has('message'))<h6>{{session()->get('message')}}</h6>@endif
                                 <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
