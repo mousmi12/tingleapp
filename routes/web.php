@@ -24,8 +24,11 @@ use App\Http\Controllers\UserProfileController;
 //     return view('admin.dashboard')->name('admin.dashboard');
 //});
 //Login
-Route::get('/admin/login',[LoginController::class,'login'])->name('admin.login');
-Route::post('/admin/login',[LoginController::class,'dologin'])->name('admin.dologin');
+
+
+Route::group(['middleware' => 'prevent-back-history'],function(){
+    Route::group(['middleware' => 'auth'],function() {
+
 
 Route::get('/admin/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
 
@@ -56,11 +59,19 @@ Route::post('/admin/order/index', [OrderHistoryController::class, 'updateStatus'
 Route::get('/admin/profile/index',[UserProfileController::class,'index'])->name('admin.profile.index');
 Route::post('/admin/profile/index',[UserProfileController::class,'store'])->name('admin.profile.store');
 
-//User Panel
+
 // Route::get('/', function () {
 //     return view('user.dashboard');
 // });
+});
+});
 
+//Login
+Route::get('/admin/login',[LoginController::class,'login'])->name('admin.login');
+Route::post('/admin/login',[LoginController::class,'dologin'])->name('admin.dologin');
+Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+//User Panel
 Route::get('/',[CategoryController::class,'dashboard'])->name('user.dashboard');
 Route::get('/user/products/{catid}',[ProductController::class,'userproduct'])->name('user.products');
 Route::get('/user/product', function () {
