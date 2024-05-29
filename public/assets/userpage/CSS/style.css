@@ -1,0 +1,33 @@
+.imagShadow {
+  box-shadow: 1px 0px 8px 7px #b8b0b0;
+}
+
+.categoryImage {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position:center;
+}
+
+.categoryImageThr {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position:75% 50%;
+  }
+
+.sliderImage {
+  width: 100%;
+  height: 80vh;
+}
+
+@font-face {
+  font-family: "ItalicFont";
+  src: url("../font/Rough-Anthem-Italic.ttf") format("truetype"),
+    url("../font/Rough-Anthem-Italic.ttf") format("truetype");
+}
+
+.fontStyle{
+    font-family: 'ItalicFont';
+    font-size: 40px;
+}
